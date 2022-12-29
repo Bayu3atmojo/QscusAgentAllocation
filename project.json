@@ -1,7 +1,7 @@
 {
-  "name": "Optimizing Agent Allocation_Windows",
-  "description": "Agent Allocation Process",
-  "main": "Main.xaml",
+  "name": "MinMax Algorithm Optimization",
+  "description": "Optimization agent allocation using minmax algorithm",
+  "main": "NewActivity.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.System.Activities": "[21.10.2]"
@@ -9,15 +9,15 @@
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "21.4.4.0",
-  "projectVersion": "1.0.1",
+  "studioVersion": "22.12.0.0",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": false,
-    "supportsPersistence": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -25,12 +25,12 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false,
+    "mustRestoreAllDependencies": true,
     "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -39,17 +39,9 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
-  "entryPoints": [
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "b4082fe9-8c8e-4dc5-a91f-3787951afd9c",
-      "input": [],
-      "output": []
-    }
-  ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},

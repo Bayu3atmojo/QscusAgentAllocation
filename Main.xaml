@@ -32,8 +32,6 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
@@ -123,13 +121,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="496,2257" sap2010:WorkflowViewState.IdRef="Sequence_39">
+    <Sequence sap:VirtualizedContainerService.HintSize="496,2260" sap2010:WorkflowViewState.IdRef="Sequence_39">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Agent_Id&#xA;Agent_Status&#xA;Assignment_Status&#xA;Conversations&#xA;Agent_Channel&#xA;AverageResolveTime" DataTable="[dataAgent]" DisplayName="Read Agent's Data" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Lembar4" WorkbookPath="Data\Data_Agent.xlsx">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Agent_Id&#xA;Agent_Status&#xA;Assignment_Status&#xA;Conversations&#xA;Agent_Channel&#xA;AverageResolveTime" DataTable="[dataAgent]" DisplayName="Read Agent's Data" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Lembar1" WorkbookPath="Data\Data_Agent.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -138,7 +136,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Customer_Id&#xA;Customer_Status&#xA;Customer_Channel&#xA;Customer_Group" DataTable="[dtOutputCustomer]" DisplayName="Read Customer's Data Input" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Lembar4" WorkbookPath="Data\Data_Customer.xlsx">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Customer_Id&#xA;Customer_Status&#xA;Customer_Channel&#xA;Customer_Group" DataTable="[dtOutputCustomer]" DisplayName="Read Customer's Data Input" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Lembar1" WorkbookPath="Data\Data_Customer.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -146,7 +144,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
       <ui:BuildDataTable DataTable="[dtInputCustomer]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;WaitingTime&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; default=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-      <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_23">
+      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
         <Assign.To>
           <OutArgument x:TypeArguments="s:Type">[dtInputCustomer.Columns("WaitingTime").DataType]</OutArgument>
         </Assign.To>
@@ -177,7 +175,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MergeDataTable>
-      <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_24">
+      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
         <Assign.To>
           <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">[dataRowCustomer]</OutArgument>
         </Assign.To>
@@ -185,7 +183,7 @@
           <InArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">[dtInputCustomer.AsEnumerable().GroupBy(Function(x) convert.ToString(x.Field(of object)("Customer_Id"))).SelectMany(function(gp) gp.ToArray().Take(1))]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_25">
+      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_25">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dataCustomer]</OutArgument>
         </Assign.To>
@@ -935,8 +933,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
-      <ui:WriteRange AddHeaders="True" DataTable="[dataAssignment]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Iterasi6" StartingCell="A1" WorkbookPath="Data\Data_Assignment.xlsx" />
-      <ui:WriteRange AddHeaders="True" DataTable="[dataAgent]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Lembar5" StartingCell="A1" WorkbookPath="Data\Data_Agent.xlsx" />
+      <ui:WriteRange AddHeaders="True" DataTable="[dataAssignment]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Lembar1" StartingCell="A1" WorkbookPath="Data\Data_Assignment.xlsx" />
+      <ui:WriteRange AddHeaders="True" DataTable="[dataAgent]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Lembar1" StartingCell="A1" WorkbookPath="Data\Data_Agent.xlsx" />
       <ui:WriteRange AddHeaders="True" DataTable="[DataCustomer]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Lembar1" StartingCell="A1" WorkbookPath="Data\Data_CustomerFinal.xlsx" />
     </Sequence>
   </Sequence>
